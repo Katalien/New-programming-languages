@@ -30,6 +30,7 @@ fn section1() {
 
     let s1: String = "hello".to_string();
 }
+
 fn section2() {
     println!("\n Rule 1 ");
     {
@@ -154,6 +155,7 @@ fn section2() {
         println!("{}, {}", reference1, reference2);
     }
 }
+
 fn section3() {
     struct SomeStructure {
         some_integer: i32,
@@ -167,6 +169,7 @@ fn section3() {
         HUNDRED = 100,
     }
 }
+
 fn section4() {
     // Создадим структуру Person
     // Рассмотрим распространенные действия с ней
@@ -225,6 +228,7 @@ fn section4() {
 
     println!("{:?}", person4);
 }
+
 fn section5() {
     enum OperationType {
         Add,      // сложение
@@ -261,6 +265,7 @@ fn section5() {
 
 
 }
+
 fn section6() {
     // создадим структуру прямоугольника и имплементируем для него некоторые методы
     #[derive(Debug)] // Для простого вывода в консоль
@@ -301,6 +306,7 @@ fn section6() {
     let square = Rectangle::create_square(5.0); // вызываем ассоциированный со структурой метод
     println!("square sides {:?}", square);
 }
+
 fn section7(){
     enum Comment {
         Excellent(String),
