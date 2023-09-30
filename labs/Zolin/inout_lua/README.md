@@ -12,5 +12,5 @@ docker run -it inout_lua_image
 1. Math expressions: `+-*/`(ex: 1+3)
 2. `history` - show all history of commands
 3. `delete` - delete all commands from hisory
-4. `run` - run a command
+4. `run <num>` - run a command (`<num>` is 1,2,...)
 5. `exit` - exit from the loop
