@@ -4,5 +4,5 @@
 
 ```bash
 docker build -t img-functions .
-docker ru -it img-functions
+docker run -it img-functions
 ```
