@@ -1,0 +1,41 @@
+version: '3'
+services:
+  chat-server:
+    image: erlang-chat-server
+    build:
+      context: ./path/to/server/source
+      dockerfile: Dockerfile.server
+    networks:
+      - chat-network
+    ports:
+      - "8080:8080" # Map the server port (adjust if needed)
+
+  chat-client1:
+    image: erlang-chat-client
+    build:
+      context: ./path/to/client/source
+      dockerfile: Dockerfile.client
+    networks:
+      - chat-network
+    depends_on:
+      - chat-server # Ensure the server is started before the client
+    stdin_open: true
+    tty: true
+
+  chat-client2:
+    image: erlang-chat-client
+    build:
+      context: ./path/to/client/source
+      dockerfile: Dockerfile.client
+    networks:
+      - chat-network
+    depends_on:
+      - chat-server # Ensure the server is started before the client
+    stdin_open: true
+    tty: true
+
+# Add more chat-client services as needed
+
+networks:
+  chat-network:
+    driver: bridge
