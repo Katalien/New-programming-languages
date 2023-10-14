@@ -22,30 +22,22 @@ func dijkstra(graph: Graph, startNode: Int) -> [Int: Int] {
     var distances: [Int: Int] = [:]
     var priorityQueue = PriorityQueue<(node: Int, distance: Int)> { $0.distance < $1.distance }
 
-    // Initialize distances with infinity and the start node with 0
     for node in graph.adjacencyList.keys {
         distances[node] = Int.max
     }
     distances[startNode] = 0
-
-    // Enqueue the start node with a distance of 0
     priorityQueue.enqueue((node: startNode, distance: 0))
 
     while !priorityQueue.isEmpty {
         let (currentNode, currentDistance) = priorityQueue.dequeue()!
-
-        // Skip nodes whose distance is already smaller
         if currentDistance > distances[currentNode]! {
             continue
         }
-
-        // Iterate through neighboring nodes
         if let neighbors = graph.adjacencyList[currentNode] {
             for neighbor in neighbors {
                 let (neighborNode, edgeWeight) = neighbor
                 let newDistance = currentDistance + edgeWeight
 
-                // If the new distance is smaller, update the distance and enqueue the neighbor
                 if newDistance < distances[neighborNode]! {
                     distances[neighborNode] = newDistance
                     priorityQueue.enqueue((node: neighborNode, distance: newDistance))
@@ -125,4 +117,23 @@ struct PriorityQueue<Element> {
     }
 }
 
+// Example usage:
+let graph = Graph()
+graph.addEdge(0, 1, 4)
+graph.addEdge(0, 2, 3)
+graph.addEdge(1, 2, 1)
+graph.addEdge(1, 3, 2)
+graph.addEdge(2, 3, 4)
+graph.addEdge(3, 4, 2)
+graph.addEdge(4, 5, 6)
 
+let startNode = 0
+let distances = dijkstra(graph: graph, startNode: startNode)
+
+for (node, distance) in distances {
+    if distance == Int.max {
+        print("Node \(node) is not reachable from node \(startNode)")
+    } else {
+        print("Shortest distance from node \(startNode) to node \(node) is \(distance)")
+    }
+}
