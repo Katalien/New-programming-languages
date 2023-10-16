@@ -117,17 +117,47 @@ struct PriorityQueue<Element> {
     }
 }
 
-// Example usage:
-let graph = Graph()
-graph.addEdge(0, 1, 4)
-graph.addEdge(0, 2, 3)
-graph.addEdge(1, 2, 1)
-graph.addEdge(1, 3, 2)
-graph.addEdge(2, 3, 4)
-graph.addEdge(3, 4, 2)
-graph.addEdge(4, 5, 6)
+func readGraphAndStartNode(fromFile filePath: String) -> (Graph, Int) {
+    let graph = Graph()
+    var startNode = 0
+    
+    if let fileContent = try? String(contentsOf: URL(fileURLWithPath: filePath), encoding: .utf8) {
+        let lines = fileContent.components(separatedBy: .newlines)
+        
+        var isComment = false
+        for line in lines {
+            if line.hasPrefix("#") {
+                isComment = true
+                continue
+            }
+            
+            if isComment && line.isEmpty {
+                isComment = false
+                continue
+            }
+            
+            if !isComment {
+                let components = line.components(separatedBy: " ")
+                if components.count == 1 {
+                    startNode = Int(components[0]) ?? 0
+                } else if components.count == 3 {
+                    let u = Int(components[0]) ?? 0
+                    let v = Int(components[1]) ?? 0
+                    let weight = Int(components[2]) ?? 0
+                    graph.addEdge(u, v, weight)
+                }
+            }
+        }
+    }
+    
+    return (graph, startNode)
+}
 
-let startNode = 0
+
+// Example usage:
+let (graph, startNode) = readGraphAndStartNode(fromFile: "config.txt")
+print("Adjacency List: \(graph.adjacencyList)")
+print("Start Node: \(startNode)")
 let distances = dijkstra(graph: graph, startNode: startNode)
 
 for (node, distance) in distances {
