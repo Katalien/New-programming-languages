@@ -4,7 +4,7 @@
 
 ```bash
 docker build -t inout_lua_image .
-docker run -it inout_lua_image
+docker run -it --mount type=bind,source="$(pwd)",target=/app inout_lua_image
 ```
 
 ## Commands
