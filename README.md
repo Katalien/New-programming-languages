@@ -1,25 +1,21 @@
-# New programming languages labs
+# New programming languages
 
-## Description
+## Описание репозитория
 
-Repository for reports and labs on `New programming languages` at SPbSTU.
+Репозиторий для персональных лабораторных(Иван Золин) и лекций по Rust с примерами кода.
 
-`Team`: Ivan Zolin, Ekaterina Zinyakova, Artem Ogorodnikov, Artem Petroshenko, Valeria Rubanova.
+`Команда`: Иван Золин, Екатерина Зинякова, Артём Огородников, Артём Петрошенко, Валерия Рубанова.
 
-`Programming languages`: Rust, Lua, Erlang, Swift, Go.
+`Языки программирования`: Rust, Lua, Erlang, Swift, Go.
 
 ## Project structure
 
 ```bash
-├───labs # personal labs, in different folders
-│   ├───Ogorodnikov # Artem Ogorodnikov
-│   ├───Petroshenko # Artem Petroshenko
-│   ├───Rubanova # Valeria Rubanova
-│   ├───Zinyakova # Ekaterina Zinyakova
-│   └───Zolin # Ivan Zolin
+├───Ivan_Zolin # personal labs, in different folders
 ├───reports # team reports: code + presentation 
-│   ├───hello_world 
-│   └───... 
+│   ├───01_hello_world 
+│   ├───...
+│   └───docker # executable docker container
 └───README.md # Documentation
 
 ```
