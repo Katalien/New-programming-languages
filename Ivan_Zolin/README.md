@@ -1,10 +1,10 @@
 # Лабораторные для Новых языков программирования
 
-1. [Лаборатолрная №1(Рекурсия) - Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/rust_recursion)
+1. [Лаборатолрная №1(Рекурсия) - Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/rust_recursion")
 
     `Задача коммивояжёра`. Построение кратчайшего маршрута, проходящего по указанному маршруту хотя бы одному разу с последующим возвратом в исходный город. Реализовано чтение параметров из конфигурационного файла: граф городов, стартовый город.
 
-2. [Лаборатолрная №2(Потоки) - Golang]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/go_threads)
+2. [Лаборатолрная №2(Потоки) - Golang]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/go_threads")
 
     `Одновременное извлечение данных из нескольких URL-адресов`
     * считывание url адресов из текстового файла
@@ -12,16 +12,16 @@
     * `fetchData`: основная функция, которая отвечает за отправку HTTP GET запроса и обработку ответа. Проверяет наличие ошибок на этапах запроса и ответа, регистрируя ошибки и фиксируя результаты
     * `sync.WaitGoup` используется для гарантии того, что программа ожидает завершения всех программ
 
-3. [Лаборатолрная №3(Алгоритм) - Swift]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/swift_algorithm)
+3. [Лаборатолрная №3(Алгоритм) - Swift]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/swift_algorithm")
 
     `Алгоритм Дейкстры`. Поиск наименьшего пути. Считывание графа и стартового города из файла `config.txt`.
 
-4. [Лаборатолрная №4(inpout) - Lua]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/lua_inout)
+4. [Лаборатолрная №4(inpout) - Lua]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/lua_inout")
 
     `Калькулятор`
     * Ввод команд калькулятора и вывод результата в консоль и сохранение историю выполненных команд в файл (history.txt).
     * Команды: показать, удалить, выполнить команду из истории
 
-5. [Лаборатолрная №5(async) - Erlang]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/erlang_async)
+5. [Лаборатолрная №5(async) - Erlang]("https://github.com/IMZolin/New-programming-languages/tree/master/Ivan_Zolin/erlang_async")
 
     `Чат`. Асинхронный чат взаимодействия двух чатов(сервер-клиент).

@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  rust:
+    build:
+      context: .
+    container_name: rust_study
+    volumes:
+      - ../src:/home/student/src

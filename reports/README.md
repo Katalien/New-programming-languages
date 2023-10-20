@@ -1,6 +1,17 @@
-# Rust reports for New programming languages
+# Отчёты Rust по Новым языкам программирования
 
-1. Hello World and installing the Rust
-2. Data Types in Rust
-3. Custom data types
-4. Functions
+## Темы
+
+1. [Hello World и установка Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/01_hello_world")
+2. [Основные типы в Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/02_types")
+3. [Пользовательские типы данных]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/03_custom_ds")
+4. [Функции]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/04_functions")
+
+## Запуск с Docker
+
+[Docker]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/docker")
+
+## Другой запсук
+
+docker build -t rust_reports .
+docker run -e PROJECT_NAME=01_hello_world rust_reports
