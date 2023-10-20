@@ -2,14 +2,14 @@
 
 ## Темы
 
-1. [Hello World и установка Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/01_hello_world")
-2. [Основные типы в Rust]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/02_types")
-3. [Пользовательские типы данных]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/03_custom_ds")
-4. [Функции]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/04_functions")
+1. [Hello World и установка Rust](01_hello_world)
+2. [Основные типы в Rust](02_types)
+3. [Пользовательские типы данных](03_custom_ds)
+4. [Функции](04_functions)
 
 ## Запуск с Docker
 
-[Docker]("https://github.com/IMZolin/New-programming-languages/tree/master/reports/docker")
+[Docker](docker)
 
 ## Другой запсук
 
