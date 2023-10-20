@@ -1,1 +1,0 @@
-# Artem Petroshenko's labs

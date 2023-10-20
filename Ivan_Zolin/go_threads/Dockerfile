@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . .
 
 # Build the Go application
-RUN go build -o threads_go
+RUN go build -o go_threads
 
 # Expose the port the application will run on
 EXPOSE 8080
 
 # Command to run the application
-CMD ["./threads_go"]
+CMD ["./go_threads"]

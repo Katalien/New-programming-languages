@@ -1,1 +1,0 @@
-# Artem Ogorodnikov's labs

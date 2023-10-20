@@ -156,7 +156,6 @@ func readGraphAndStartNode(fromFile filePath: String) -> (Graph, Int) {
 
 // Example usage:
 let (graph, startNode) = readGraphAndStartNode(fromFile: "config.txt")
-print("Adjacency List: \(graph.adjacencyList)")
 print("Start Node: \(startNode)")
 let distances = dijkstra(graph: graph, startNode: startNode)
 

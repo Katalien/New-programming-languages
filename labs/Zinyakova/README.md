@@ -1,1 +1,0 @@
-# Ekaterina Zinyakova's labs

@@ -1,6 +1,10 @@
-# Async chat lab on Erlang (Ivan Zolin)
+# Асинхронность. Erlang
 
-## Deployment
+## Описание
+
+ `Чат`. Асинхронный чат взаимодействия двух чатов(сервер-клиент).
+
+## Запсук
 
 ```bash
 docker build -t erlang-chat-server -f Dockerfile.server .

@@ -4,4 +4,4 @@ WORKDIR /app
 COPY . .
 
 RUN cargo build --release
-CMD ["./target/release/recursion_rust"]
+CMD ["./target/release/rust_recursion"]

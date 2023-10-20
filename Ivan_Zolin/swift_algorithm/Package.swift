@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "algorithm_swift",
+    name: "swift_algorithm",
     products: [
-        .executable(name: "algorithm_swift", targets: ["algorithm_swift"]),
+        .executable(name: "swift_algorithm", targets: ["swift_algorithm"]),
     ],
     targets: [
         .target(
-            name: "algorithm_swift",
+            name: "swift_algorithm",
             dependencies: [
                 // Add your target's dependencies here
             ]
