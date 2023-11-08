@@ -208,6 +208,100 @@ fn main() {
 //     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 // }
 
+// fn trait_param(){
+//     pub trait Summary { // trait
+//         fn summarize(&self) -> String;
+//     }
+
+//     pub struct NewsArticle {
+//         pub headline: String,
+//         pub location: String,
+//         pub author: String,
+//         pub content: String,
+//     }
+
+//     impl Summary for NewsArticle {
+//         fn summarize(&self) -> String {
+//             format!("{}, by {} ({})", self.headline, self.author, self.location)
+//         }
+//     }
+
+//     pub struct Tweet {
+//         pub username: String,
+//         pub content: String,
+//         pub reply: bool,
+//         pub retweet: bool,
+//     }
+
+//     impl Summary for Tweet {
+//         fn summarize(&self) -> String {
+//             format!("{}: {}", self.username, self.content)
+//         }
+//     }
+
+//     pub fn notify(item: &impl Summary) { // trait in args
+//         println!("Breaking news! {}", item.summarize());
+//     }
+    
+//     pub fn notify2(item1: &impl Summary, item2: &impl Summary) { // traits in args
+//         println!("Breaking news! {} {]", item1.summarize(), item2.summarize());
+//     }
+    
+//     pub fn notify2<T: Summary>(item1: &T, item2: &T) { // same notify2
+//         println!("Breaking news! {} {]", item1.summarize(), item2.summarize());    
+//     }
+    
+//     pub fn notify3(item: &(impl Summary + Display)) { // multi traited arg
+//         println!("Breaking news! {}", item.summarize());
+//     }
+    
+//     pub fn notify3<T: Summary + Display>(item: &T) { // same notify3
+//         println!("Breaking news! {}", item.summarize());
+//     }
+// }
+
+// fn returnable_trait(){
+//     pub trait Summary {
+//         fn summarize(&self) -> String;
+//     }
+
+//     pub struct NewsArticle {
+//         pub headline: String,
+//         pub location: String,
+//         pub author: String,
+//         pub content: String,
+//     }
+
+//     impl Summary for NewsArticle {
+//         fn summarize(&self) -> String {
+//             format!("{}, by {} ({})", self.headline, self.author, self.location)
+//         }
+//     }
+
+//     pub struct Tweet {
+//         pub username: String,
+//         pub content: String,
+//         pub reply: bool,
+//         pub retweet: bool,
+//     }
+
+//     impl Summary for Tweet {
+//         fn summarize(&self) -> String {
+//             format!("{}: {}", self.username, self.content)
+//         }
+//     }
+
+//     fn returns_summarizable() -> impl Summary {
+//         Tweet {
+//             username: String::from("horse_ebooks"),
+//             content: String::from(
+//                 "of course, as you probably already know, people",
+//             ),
+//             reply: false,
+//             retweet: false,
+//         }
+//     }
+// }
 
 enum Option_i32 {
     Some(i32),
